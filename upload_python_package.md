@@ -163,6 +163,27 @@ setup(
 
 ```
 
+### Specify files to include
+
+This is a very important step, if your package contains other files, such as README, LICENSE, etc. Creat a file named MENIFEST.in, that has a list of files you want to include. Here are some example lines:
+
+``` python
+# Include the README
+include *.md
+
+# Include the license file
+include LICENSE.txt
+
+# Include setup.py
+include setup.py
+
+# Include the data files
+recursive-include data *
+recursive-include notebooks *
+recursive-include figs *
+
+```
+
 ## Create a PyPi account
 You can register yourself for a PyPi account here: https://pypi.org/account/register/. Remember your username (not the Name, not the E-Mail Address) and your password, you will need it later for the upload process.
 
